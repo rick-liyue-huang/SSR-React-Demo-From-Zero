@@ -4,7 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 import RoutesList from "./routes";
 import { hydrateRoot } from 'react-dom/client';
 import {Provider} from 'react-redux';
-import store from "./store";
+// import store from "./store";
 import createStoreInstance from "./store";
 
 

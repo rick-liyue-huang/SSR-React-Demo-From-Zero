@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchHomeData} from "../store/actions/home";
+import {Helmet} from "react-helmet";
+
 
 const HomePage = () => {
 
@@ -18,8 +20,17 @@ const HomePage = () => {
 		dispatch(fetchHomeData)
 	}, []);
 
+	const renderHead = () => {
+		return (
+			<Helmet>
+				<title>home page</title>
+			</Helmet>
+		)
+	}
+
 	return (
 		<div>
+			{renderHead()}
 			this is home page
 			<br/>
 			<button onClick={handleClick}>Click me</button>
